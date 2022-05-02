@@ -1,0 +1,136 @@
+.c-person {
+	$arch_int: is-arch-int;// archive-interview特定クラス
+	&-list {
+		@include mq(person-list-tab) {
+			padding: 0 60px 0 65px;
+		}
+		@include mq(sp) {
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100vw;
+			margin-top: 20px;
+			padding: 0;
+		}
+		position: relative;
+		margin-top: 40px;
+		padding: 0 40px;
+		> .prev-arrow,
+		> .next-arrow {
+			position: absolute;
+			top: 113px;
+			z-index: 2;
+			padding-left: 5px;
+			cursor: pointer;
+		}
+		> .prev-arrow {
+			@include mq(person-list-tab) {
+				left: 2px;
+			}
+			@include mq(sp) {
+				top: 50px;
+				left: 50px;
+			}
+			left: -20px;
+		}
+		> .next-arrow {
+			@include mq(person-list-tab) {
+				right: 2px;
+			}
+			@include mq(sp) {
+				top: 50px;
+				right: 50px;
+			}
+			right: -10px;
+		}
+	}
+
+	&-item {
+		overflow: hidden;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: all $change-time ease 0s;
+		&:not(:first-child) {
+			margin-left: 10px;
+		}
+		&:not(.slick-active) {
+			opacity: .5;
+			&.#{$arch_int} {
+				opacity: 1;
+			}
+		}
+		&:hover {
+			> a {
+				opacity: 1;
+			}
+			.c-person-item__img {
+				> img {
+					transform: scale(1.2);
+				}
+			}
+			.c-person-item__year,
+			.c-person-item__job,
+			.c-person-item__role {
+				opacity: $hover-opacity;
+				transition: all $change-time ease 0s;
+			}
+		}
+		&__img {
+			@include mq(sp) {
+				height: auto;
+				margin-bottom: 10px;
+			}
+			max-height: 260px;
+			margin-bottom: 30px;
+			overflow: hidden;
+			border-radius: 10px;
+			> img {
+				height: 100%;
+				transition: all $change-time ease 0s;
+			}
+		}
+		&__year {// 入社年度
+			@include mq(sp) {
+				width: 90px;
+				height: 20px;
+				font-size: 1.2rem;
+				line-height: 20px;
+			}
+			display: inline-block;
+			width: 130px;
+			height: 30px;
+			border-radius: 5px;
+			background: $red-familiy;
+			color: #ffffff;
+			font-weight: $font-weight-bold;
+			font-size: 1.6rem;
+			line-height: 30px;
+			letter-spacing: .05em;
+			text-align: center;
+		}
+		&__occupation {// 職種
+			@include mq(sp) {
+				margin-left: 10px;
+				font-size: 1.4rem;
+				&.is-narrow {
+					margin-left: 0;
+				}
+			}
+			display: inline-block;
+			margin-left: 15px;
+			color: $red-familiy;
+			font-weight: $font-weight-bold;
+			letter-spacing: .05em;
+		}
+		&__belongs {// 職種
+			@include mq(sp) {
+				margin-top: 10px;
+				font-size: 1.2rem;
+			}
+			margin-top: 15px;
+			font-size: 1.5rem;
+			line-height: (26/15);
+			letter-spacing: .05em;
+		}
+	}
+}

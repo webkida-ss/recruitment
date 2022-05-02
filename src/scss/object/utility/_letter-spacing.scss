@@ -1,0 +1,9 @@
+.u-ls {
+	&-sp {
+		&-30 {
+			@include mq(sp) {
+				letter-spacing: .03em;
+			}
+		}
+	}
+}

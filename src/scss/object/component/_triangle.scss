@@ -1,0 +1,9 @@
+.c-triangle {
+	display: block;
+	width: 0;
+	height: 0;
+	border-width: 6px 5px 0 5px;
+	border-style: solid;
+	border-color: $mint-green transparent transparent transparent;
+	content: '';
+}

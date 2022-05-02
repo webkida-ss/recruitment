@@ -1,0 +1,152 @@
+// 仕事について
+
+// .p-work-flow {
+// 	&__img {
+// 		width: 100%;
+// 		margin-top: 60px;
+// 		> img {
+// 			width: 100%;
+// 		}
+// 	}
+// }
+.p-work-support {
+	margin-top: 60px;
+	&__list {
+		@include mq(sp) {
+			margin-top: 40px;
+		}
+		margin-top: 60px;
+	}
+
+	&__item {
+		@for $i from 1 through 8 {
+			&0#{$i} {
+				@include mq(sp) {
+					display: block;
+				}
+				display: flex;
+				justify-content: space-between;
+				&.is-reverse {
+					flex-direction: row-reverse;
+				}
+			}
+		}
+		@for $i from 2 through 8 {
+			&0#{$i} {
+				@include mq(sp) {
+					margin-top: 40px;
+				}
+				margin-top: 80px;
+			}
+		}
+	}
+
+	&__content,
+	&__img {
+		@include mq(sp) {
+			width: 100%;
+			margin-top: 15px;
+		}
+		flex-shrink: 0;
+		width: (530/1100)*100%;
+		> img {
+			border-radius: 10px;
+		}
+	}
+
+	&__title {
+		@include mq(sp) {
+			padding-bottom: 10px;
+			font-size: 2rem;
+		}
+		padding-bottom: 15px;
+		background: url(../images/recruit/work/work-sec02-bg01.jpg) no-repeat bottom left;
+		font-weight: $font-weight-bold;
+		font-size: 2.6rem;
+		letter-spacing: .01em;
+	}
+	&__txt {
+		@include mq(sp) {
+			font-size: 1.4rem;
+			line-height: 1.5;
+		}
+		margin-top: 10px;
+		font-size: 1.6rem;
+		line-height: (32/16);
+		letter-spacing: .05em;
+	}
+	&__sub-title {
+		@for $i from 1 through 2 {
+			&0#{$i} {
+				@include mq(sp) {
+					font-size: 1.6rem;
+				}
+				color: $yellow-mad;
+				font-weight: $font-weight-bold;
+				font-size: 2rem;
+				letter-spacing: .01em;
+			}
+		}
+		&01 {
+			@include mq(sp) {
+				margin-top: 10px;
+			}
+			margin-top: 15px;
+		}
+		&02 {
+			@include mq(sp) {
+				margin-top: 10px;
+			}
+			margin-top: 30px;
+		}
+	}
+	&__sub-txt {
+		@for $i from 1 through 2 {
+			&0#{$i} {
+				@include mq(sp) {
+					font-size: 1.4rem;
+					line-height: 1.5;
+				}
+				margin-top: 5px;
+				font-size: 1.6rem;
+				line-height: (32/16);
+				letter-spacing: .05em;
+			}
+		}
+	}
+
+	&__msg {
+		@for $i from 1 through 2 {
+			&0#{$i} {
+				@include mq(sp) {
+					margin-top: 30px;
+					padding: 20px;
+				}
+				margin-top: 40px;
+				padding: 30px 45px;
+				border-radius: 10px;
+				background: rgba($color: $yellow-mad, $alpha: .1);
+			}
+		}
+	}
+	&__msg-title {
+		@include mq(sp) {
+			font-size: 2rem;
+			line-height: 1.2;
+		}
+		color: $yellow-mad;
+		font-weight: $font-weight-bold;
+		font-size: 2.4rem;
+		letter-spacing: .01em;
+	}
+	&__msg-txt {
+		@include mq(sp) {
+			font-size: 1.4rem;
+			line-height: 1.5;
+		}
+		margin-top: 10px;
+		font-size: 1.6rem;
+		line-height: (32/16);
+		letter-spacing: .05em;
+	}
+}

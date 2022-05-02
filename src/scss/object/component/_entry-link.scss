@@ -1,0 +1,76 @@
+// 各種エントリーリンク
+.c-entry-link {
+	border-radius: 10px;
+	background: rgba($color: $mint-green, $alpha: .1);
+	&__list {
+		@include mq(sp) {
+			display: block;
+			padding: 20px;
+		}
+		display: flex;
+		justify-content: space-between;
+		padding: 30px 50px;
+	}
+	&__item {
+		@for $i from 1 through 3 {
+			&0#{$i} {
+				@include mq(sp) {
+					width: 100%;
+				}
+				width: (307/1100)*100%;
+			}
+		}
+		@for $i from 2 through 3 {
+			&0#{$i} {
+				@include mq(sp) {
+					margin-top: 15px;
+				}
+			}
+		}
+	}
+	&__img {
+		@include mq(sp) {
+			min-height: auto;
+			> img {
+				width: 50%;
+				margin: 0 auto;
+			}
+		}
+		min-height: 40px;
+	}
+	&__link {
+		@include mq(sp) {
+			margin-top: 10px;
+			padding: 10px 0;
+			font-size: 1.2rem;
+		}
+		display: block;
+		position: relative;
+		margin-top: 20px;
+		padding: 20px 30px;
+		border-radius: 10px;
+		background: #fff;
+		font-weight: $font-weight-bold;
+		font-size: 1.6rem;
+		text-align: center;
+		&::after {
+			display: block;
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			transform: translateY(-50%);
+			width: 16px;
+			height: 16px;
+			background: url(../images/recruit/common/cmn-link01.jpg) no-repeat;
+			content: '';
+		}
+	}
+	&__txt {
+		@include mq(sp) {
+			font-size: 1.2rem;
+		}
+		font-size: 1.6rem;
+		line-height: (20/16);
+		text-align: center;
+	}
+}

@@ -1,0 +1,133 @@
+// アーカイブページトップ
+.c-recruit-archive-top {
+	position: relative;
+	padding: 0 0 80px 0;
+	&__bg {
+		@include mq(sp) {
+			height: 100%;
+		}
+		position: absolute;
+		bottom: 0;
+		z-index: 1;
+		width: 100%;
+		height: 300px;
+		background: rgba($color: $light-pink, $alpha: .8);
+	}
+	&__inner {
+		@include mq(pc) {
+			width: $layout-width-canvas-pc - $padding-pc;
+			max-width: 100%;
+			margin-right: 0;
+			margin-left: auto;
+		}
+		position: relative;
+		z-index: 2;
+	}
+	&__content {
+		@include mq(sp) {
+			display: block;
+		}
+		display: flex;
+		justify-content: flex-end;
+	}
+	&__detail {
+		@include mq(sp) {
+			width: 100%;
+			padding: 40px 0 0 0;
+		}
+		display: flex;
+		flex-shrink: 0;
+		flex-direction: column;
+		justify-content: flex-end;
+		width: (590px/$layout-width-canvas-pc)*100vw;
+		padding: 100px 1% 0 0;
+	}
+	&__img {
+		@include mq(sp) {
+			width: 80%;
+			margin: 0 auto;
+		}
+		width: 200px;
+	}
+	&__txt {
+		@include mq(sp) {
+			margin-top: 20px;
+			font-size: 1.4rem;
+			line-height: (48/28);
+		}
+		margin-top: 40px;
+		margin-bottom: auto;
+		font-size: 1.6rem;
+		line-height: (36/16);
+		letter-spacing: .05em;
+	}
+	&__bars {
+		@include mq(sp) {
+			position: absolute;
+			bottom: -25px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		&.is-project {
+			> ul.slick-dots {
+				justify-content: center;
+			}
+		}
+		> ul.slick-dots {
+			display: flex;
+			justify-content: flex-start;
+			position: relative;
+			bottom: auto;
+			> li {
+				@include mq(sp) {
+					width: 50px;
+					height: 3px;
+				}
+				display: inline-block;
+				width: 100px;
+				max-width: 23%;
+				height: 6px;
+				background: #d0d0d0;
+				&:not(:first-child) {
+					margin-left: 5px;
+				}
+				&.slick-active {
+					background: $red-familiy;
+				}
+			}
+		}
+		.slick-dots {
+			li {
+				button {
+					display: none;
+				}
+			}
+		}
+	}
+	&__mv {
+		@include mq(sp) {
+			margin-top: 25px;
+		}
+		&--inner {
+			@include mq(sp) {
+				width: 100%;
+			}
+			width: (850px/$layout-width-canvas-pc)*100vw;
+			overflow: hidden;
+			border-bottom-left-radius: 30px;
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	&__breadcrumb {
+		@include mq(sp) {
+			display: none;
+		}
+		position: relative;
+		z-index: 3;
+		padding-right: 15px;
+		text-align: right;
+	}
+}

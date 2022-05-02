@@ -1,0 +1,281 @@
+// プロジェクトストーリー
+
+// カスタム投稿ページ ---------------------------------------------------------------------------------------------------
+.p-single-project {
+	&__main {
+		@include mq(sp) {
+			margin-top: 50px;
+		}
+		margin-top: 60px;
+	}
+	&__other {
+		@include mq(sp) {
+			margin-top: 40px;
+			line-height: 1.4;
+		}
+		margin-top: 80px;
+		background: rgba($color: $yellow-mad, $alpha: .1);
+	}
+}
+.p-single-project-top {
+	&__mv {
+		position: relative;
+		width: 100%;
+	}
+	&__thumbnail {
+		width: 100%;
+		> img {
+			width: 100%;
+		}
+	}
+	&__content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+	}
+	&__txt-img {
+		@include mq(project-tab) {
+			padding-left: 30px;
+		}
+		@include mq(sp) {
+			transform: translateX(0);
+			width: 70%;
+		}
+		transform: translateX(-10px);
+		width: (450px/$layout-width-inner-pc)*100%;
+		margin-bottom: 10px;
+	}
+	&__title {
+		@include mq(sp) {
+			width: 70%;
+			padding: 5% 7%;
+			font-size: 1.6rem;
+		}
+		width: (585px/$layout-width-inner-pc)*100%;
+		padding: 3% 2%;
+		background: $red-familiy;
+		color: white;
+		font-weight: $font-weight-bold;
+		font-size: 3.4rem;
+		letter-spacing: .05em;
+		&--sub {
+			@include mq(sp) {
+				font-size: 1.2rem;
+			}
+			display: block;
+			margin-top: 5px;
+			font-size: 2.2rem;
+			line-height: (32/22);
+		}
+	}
+	&__breadcrumb {
+		@include mq(project-tab) {
+			padding-right: 15px;
+		}
+		@include mq(sp) {
+			display: none;
+		}
+		margin-top: 25px;
+		text-align: right;
+	}
+}
+.p-single-project-main {
+	&__item {
+		&:not(:first-child) {
+			@include mq(sp) {
+				margin-top: 45px;
+			}
+			margin-top: 90px;
+		}
+	}
+}
+.p-single-project-main-item {
+	&__img {
+		overflow: hidden;
+		border-radius: 10px;
+	}
+	&__top {
+		@include mq(sp) {
+			font-size: 1.9rem;
+		}
+		position: relative;
+		margin-top: 30px;
+		padding-bottom: 20px;
+		color: $red-familiy;
+		font-weight: $font-weight-bold;
+		font-size: 2.8rem;
+		line-height: (42/28);
+		letter-spacing: .05em;
+		&::after {
+			@include mq(sp) {
+				width: 27.5px;
+				height: 1.5px;
+			}
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 55px;
+			height: 3px;
+			background: $red-familiy;
+			content: '';
+		}
+	}
+	&__detail {
+		@include mq(sp) {
+			font-size: 1.4rem;
+			line-height: 1.5;
+		}
+		margin-top: 20px;
+		font-size: 1.6rem;
+		line-height: (32/16);
+		letter-spacing: .05em;
+	}
+}
+.p-single-project-other {
+	@include mq(sp) {
+		padding: 40px;
+	}
+	padding: 80px 0 65px;
+	&__list {
+		@include mq(sp) {
+			margin-top: 30px;
+		}
+		display: flex;
+		justify-content: space-around;
+		margin-top: 70px;
+	}
+	&__item {
+		@include mq(sp) {
+			width: 100%;
+			&:not(:first-child) {
+				display: none;
+			}
+		}
+		width: (505/1090)*100%;
+	}
+}
+.p-single-project-other-item {
+	&:hover {
+		opacity: 1;
+		.p-single-project-other-item__thumbnail {
+			> img {
+				transform: scale(1.2);
+			}
+		}
+		.p-single-project-other-item__title {
+			opacity: $hover-opacity;
+		}
+	}
+	&__thumbnail {
+		overflow: hidden;
+		border-radius: 10px;
+		> img {
+			transition: all $change-time ease 0s;
+		}
+	}
+	&__title {
+		@include mq(sp) {
+			font-size: 1.4rem;
+		}
+		margin-top: 20px;
+		color: $red-familiy;
+		font-weight: $font-weight-bold;
+		font-size: 2.2rem;
+		letter-spacing: .05em;
+		&--sub {
+			@include mq(sp) {
+				font-size: 1.2rem;
+			}
+			display: block;
+			margin-top: 5px;
+			color: black;
+			font-size: 1.6rem;
+			line-height: (20/16);
+			letter-spacing: .05em;
+		}
+	}
+}
+
+// カスタム投稿アーカイブページ ---------------------------------------------------------------------------------------------------
+.p-archive-project-main {
+	&__item {
+		&:not(:first-child) {
+			@include mq(sp) {
+				margin-top: 30px;
+			}
+			margin-top: 60px;
+		}
+		> a {
+			@include mq(project-tab) {
+				display: block;
+			}
+			@include mq(sp) {
+				display: block;
+			}
+			display: flex;
+			overflow: hidden;
+			border-radius: 10px;
+		}
+	}
+	&__content {
+		@include mq(sp) {
+			padding: 20px;
+		}
+		padding: 45px 30px 45px 40px;
+		background: rgba($color: $light-pink, $alpha: .8);
+	}
+	&__title {
+		@include mq(sp) {
+			font-size: 1.6rem;
+		}
+		color: $red-familiy;
+		font-weight: $font-weight-bold;
+		font-size: 3.2rem;
+		letter-spacing: .05em;
+	}
+	&__sub-title {
+		@include mq(sp) {
+			font-size: 1.2rem;
+		}
+		margin-top: 15px;
+		font-weight: $font-weight-bold;
+		font-size: 1.8rem;
+		letter-spacing: .05em;
+		> br {
+			display: none;
+		}
+	}
+	&__txt {
+		@include mq(sp) {
+			font-size: 1.2rem;
+		}
+		margin-top: 15px;
+		font-size: 1.6rem;
+		line-height: (30/16);
+		letter-spacing: .05em;
+	}
+	&__img {
+		@include mq(project-tab) {
+			width: 100%;
+		}
+		@include mq(sp) {
+			width: 100%;
+		}
+		flex-shrink: 0;
+		width: (600/1100)*100%;
+		> img {
+			height: 100%;
+
+			object-fit: cover;
+			object-position: 100% 0;// 右上
+		}
+	}
+}

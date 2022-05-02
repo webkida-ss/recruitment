@@ -1,0 +1,37 @@
+// 検索結果画面
+.p-recruit-result {
+	&__top {
+		width: 100%;
+	}
+	&__main {
+		@include mq(sp) {
+			padding-bottom: 60px;
+		}
+		padding-bottom: 120px;
+	}
+}
+.p-recruit-result-top {
+	&__mv {
+		@include mq(sp) {
+			height: 100px;
+			font-size: 1.8rem;
+		}
+		height: 250px;
+		background: $mint-green;
+		color: white;
+		font-weight: $font-weight-bold;
+		font-size: 3.6rem;
+		letter-spacing: .02em;
+	}
+	&__inner {
+		display: flex;
+		align-items: center;
+	}
+	&__breadcrumb {
+		@include mq(sp) {
+			display: none;
+		}
+		margin-top: 25px;
+		text-align: right;
+	}
+}

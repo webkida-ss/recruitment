@@ -1,0 +1,22 @@
+// 応募書類は当社にて適切に管理いたします。〜
+.c-privacy-notice {
+	&__txt {
+		@include mq(sp) {
+			font-size: 1.4rem;
+			line-height: 1.5;
+		}
+		line-height: (32/16);
+	}
+	&__contact {
+		@include mq(sp) {
+			margin-top: 10px;
+			font-size: 1.4rem;
+		}
+		margin-top: 15px;
+		> a {
+			&::after {
+				bottom: -8px;
+			}
+		}
+	}
+}

@@ -1,0 +1,15 @@
+.u-display {
+	&-only {
+		&-pc {
+			@include mq(sp) {
+				display: none;
+			}
+		}
+		&-sp {
+			@include mq(sp) {
+				display: block;
+			}
+			display: none;
+		}
+	}
+}

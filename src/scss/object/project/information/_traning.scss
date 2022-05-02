@@ -1,0 +1,188 @@
+.p-traning {
+	// 戻るボタン
+	&__btn {
+		@include mq(sp) {
+			margin-top: 60px;
+		}
+		margin: 120px auto 0;
+	}
+}
+
+// 研修制度
+.p-traning-main {
+	&__txt01 {
+		@include mq(sp) {
+			margin-top: 30px;
+			font-size: 2rem;
+			line-height: 1.5;
+		}
+		margin-top: 55px;
+		font-weight: $font-weight-bold;
+		font-size: 2.6rem;
+		letter-spacing: .01em;
+	}
+	// 人材育成制度への考え方
+	&__think {
+		@include mq(sp) {
+			margin-top: 30px;
+		}
+		margin-top: 55px;
+	}
+	&__think-title {
+		@include mq(sp) {
+			font-size: 1.8rem;
+		}
+		color: $mint-green;
+		font-weight: $font-weight-bold;
+		font-size: 2.4rem;
+		letter-spacing: .01em;
+	}
+	&__think-desc {
+		@include mq(sp) {
+			margin-top: 10px;
+			font-size: 1.4rem;
+			line-height: (1.5);
+		}
+		margin-top: 15px;
+		font-size: 1.6rem;
+		line-height: (32/16);
+		letter-spacing: .05em;
+	}
+	// 青い部分詳細
+	&__detail {
+		@include mq(sp) {
+			margin-top: 30px;
+			padding: 15px;
+			font-size: 1.2rem;
+			line-height: 1.2;
+		}
+		margin-top: 40px;
+		padding: 35px;
+		border-radius: 10px;
+		background: rgba($color: $mint-green, $alpha: .1);
+		font-weight: $font-weight-bold;
+		font-size: 2rem;
+		line-height: 1.5;
+	}
+}
+.p-traning-diagram {
+	// 体系図
+	&__img {
+		@include mq(sp) {
+			margin-top: 30px;
+			overflow: scroll;
+			> img {
+				width: 200%;
+				max-width: none;
+			}
+		}
+		margin-top: 60px;
+	}
+	// 階層別研修〜語学講座
+	&__list {
+		@include mq(sp) {
+			margin-top: 40px;
+		}
+		margin-top: 80px;
+	}
+	&__item {
+		@for $i from 2 through 5 {
+			&0#{$i} {
+				@include mq(sp) {
+					margin-top: 20px;
+				}
+				margin-top: 40px;
+			}
+		}
+	}
+	&__item-title {
+		@include mq(sp) {
+			font-size: 1.8rem;
+		}
+		color: $mint-green;
+		font-weight: $font-weight-bold;
+		font-size: 2.4rem;
+		letter-spacing: .01em;
+	}
+	&__item-desc {
+		@include mq(sp) {
+			margin-top: 10px;
+			font-size: 1.4rem;
+			line-height: (1.5);
+		}
+		margin-top: 10px;
+		font-size: 1.6rem;
+		line-height: (32/16);
+		letter-spacing: .05em;
+	}
+	// 新入社員研修〜イノベーションセンター
+	&__topic {
+		@include mq(sp) {
+			margin-top: 40px;
+		}
+		margin-top: 80px;
+	}
+}
+.p-traning-diagram-topic {
+	&__item {
+		@for $i from 1 through 2 {
+			&0#{$i} {
+				@include mq(sp) {
+					padding: 20px;
+				}
+				padding: 40px;
+				border-radius: 10px;
+				background: rgba($color: $mint-green, $alpha: .1);
+			}
+		}
+		&02 {
+			@include mq(sp) {
+				margin-top: 20px;
+			}
+			margin-top: 30px;
+		}
+	}
+	&__title {
+		@include mq(sp) {
+			font-size: 1.6rem;
+		}
+		color: $mint-green;
+		font-weight: $font-weight-bold;
+		font-size: 2.4rem;
+		letter-spacing: .01em;
+		&--small {
+			@include mq(sp) {
+				font-size: 1rem;
+			}
+			font-weight: normal;
+			font-size: 1.4rem;
+		}
+	}
+	&__content {
+		@include mq(sp) {
+			display: block;
+		}
+		display: flex;
+		margin-top: 10px;
+	}
+	&__txt {
+		@include mq(sp) {
+			font-size: 1.4rem;
+		}
+		font-size: 1.6rem;
+		line-height: (32/16);
+		letter-spacing: .05em;
+	}
+	&__img {
+		@include mq(sp) {
+			width: 100%;
+			margin: 10px 0 0;
+		}
+		flex-shrink: 0;
+		width: (464/1100)*100%;
+		margin-left: 15px;
+		> img {
+			width: 100%;
+		}
+	}
+}

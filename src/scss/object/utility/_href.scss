@@ -1,0 +1,21 @@
+.u-href {
+	&-100{
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	&-under{
+		display: inline-block;
+		position: relative;
+		color: $mint-green;
+		&::after {
+			display: block;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 1px;
+			background: $mint-green;
+			content: '';
+		}
+	}
+}

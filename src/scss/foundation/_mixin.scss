@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------
+// mixin
+// -----------------------------------------------------------------
+
+// メディアクエリ
+@mixin mq($breakpoint) {
+	@media #{map-get($breakpoints,$breakpoint)} {
+		@content;
+	}
+}
+
+// ------------------------------------------------------------
+// 行の高さ指定、1行目の上部の余白を取り除く：ネガティブマージンをあてる
+// param : 
+//  $line-height    行の高さ（相対値）
+//  $capital-letter 文字ごとの設定値：デフォルト値 1
+// ------------------------------------------------------------
+@mixin lhCrop($line-height, $capital-letter: 1) {
+	&::before {
+		display: block;
+		width: 0;
+		height: 0;
+		margin-top: calc((#{$capital-letter} - #{$line-height}) * .5em);
+		content: '';
+	}
+}
+// ------------------------------------------------------------
+// ホバー時の下線
+// ------------------------------------------------------------
+@mixin hoverUnderLine() {
+	display: block;
+	position: absolute;
+	// bottom: -5px;
+	// width: 100%;
+	width: 0;
+	height: 1px;
+	margin-top: 5px;
+	content: '';
+	transition: all $change-time ease 0s;
+
+	transform-origin: left;
+	border-bottom: 1px solid $mint-green;
+}

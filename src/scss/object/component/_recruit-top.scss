@@ -1,0 +1,136 @@
+// 画面上部
+.c-recruit-top {
+	@include mq(sp) {
+		height: auto;
+		padding-bottom: 130px;
+	}
+	position: relative;
+	height: 560px;
+	padding-bottom: 40px;
+	&__inner {
+		position: relative;
+	}
+	&__bg {
+		@include mq(sp) {
+			width: (370px/$layout-width-canvas-sp)*100%;
+		}
+		position: absolute;
+		bottom: 0;
+		width: (1000px/$layout-width-canvas-pc)*100%;
+		height: 250px;
+		border-top-right-radius: 30px;
+		border-bottom-right-radius: 30px;
+		background: rgba($color: $mint-green, $alpha: .1);
+		&.is-work{
+			background: rgba($color: $yellow-mad, $alpha: .1);
+		}
+		&.is-career {
+			background: rgba($color: $yellow-mad, $alpha: .1);
+		}
+		&.is-person {
+			background: rgba($color: $light-pink, $alpha: .8);
+		}
+		&.is-environment {
+			background: rgba($color: $blue-dark, $alpha: .1);
+		}
+	}
+	&__mv {
+		@include mq(sp) {
+			padding-left: 30px;
+		}
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100vw;
+		height: 80%;
+		> img {
+			@include mq(sp) {
+				width: auto;
+				height: 50vh;
+			}
+			width: (950px/$layout-width-canvas-pc)*100%;
+			margin-left: auto;
+			border-bottom-left-radius: 30px;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+	&__txt {
+		@include mq(recruit-top-tab) {
+			padding-left: 30px;
+		}
+		@include mq(sp) {
+			bottom: -90px;
+			font-size: 1.8rem;
+		}
+		position: absolute;
+		bottom: 110px;
+		left: 0;
+		font-weight: $font-weight-bold;
+		font-size: 2.2rem;
+		&--strong {
+			@include mq(sp) {
+				font-size: 3rem;
+			}
+			display: block;
+			margin-bottom: 5px;
+			color: $mint-green;
+			font-size: 6rem;
+			font-family: $font-family-titillium;
+			&.is-work,
+			&.is-career {
+				color: $yellow-mad;
+			}
+			&.is-person {
+				color: $red-familiy;
+			}
+			&.is-environment {
+				color: $blue-dark;
+			}
+		}
+	}
+	&__ico {
+		@include mq(sp) {
+			top: auto;
+			right: 0;
+			bottom: -130px;
+			left: auto;
+			
+			width: 150px;
+			&.is-message {
+				// width: 30%;
+			}
+			&.is-person {
+				top: auto;
+			}
+			&.is-new {
+				right: -20px;
+				bottom: -125px;
+			}
+			&.is-career {
+				right: -20px;
+				bottom: -125px;
+			}
+			&.is-environment{
+				right: -20px;
+				bottom: -135px;
+			}
+		}
+		position: absolute;
+		top: 125px;
+		left: 50px;
+		width: 150px;
+		&.is-person {
+			top: 0;
+		}
+	}
+	&__breadcrumb {
+		@include mq(sp) {
+			display: none;
+		}
+		margin-top: 25px;
+		padding-right: 15px;
+		text-align: right;
+	}
+}

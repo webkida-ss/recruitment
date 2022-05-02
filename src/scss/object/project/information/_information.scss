@@ -1,0 +1,110 @@
+// エントリーについて
+.p-information {
+	&__upper {
+		margin-top: 60px;
+	}
+	&__lower {
+		margin-top: 50px;
+	}
+}
+.p-information-lower {
+	padding: 30px 0;
+	background: rgba($color: $mint-green, $alpha: .1);
+	// 1段目（リクナビ|マイナビ|その他）
+	&__block1 {
+		@include mq(sp) {
+			display: block;
+			width: 100%;
+		}
+		display: flex;
+		justify-content: space-between;
+	}
+	&__block1-item {
+		@for $i from 1 through 3 {
+			&0#{$i} {
+				@include mq(sp) {
+					width: 100%;
+					height: auto;
+				}
+				width: (360/1100)*100%;
+				text-align: center;
+				padding: 20px 0;
+				background: white;
+				border-radius: 10px;
+				font-weight: $font-weight-bold;
+				
+				img{
+					border-radius: 10px;
+				}
+			}
+		}
+		@for $i from 2 through 3 {
+			&0#{$i} {
+				@include mq(sp) {
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+
+	// 2段目（新卒向けイベント）
+	&__block2 {
+		img {
+			@include mq(sp) {
+				border-radius: 10px;
+			}
+		}
+		@include mq(sp) {
+			margin-top: 20px;
+			display: block;
+			width: 100%;
+		}
+		text-align: center;
+		padding: 20px 0;
+		background: white;
+		border-radius: 10px;
+		font-weight: $font-weight-bold;
+
+		margin-top: 30px;
+	}
+
+	// 3段目（募集要項|よくある質問）
+	&__block3 {
+		@include mq(sp) {
+			margin-top: 20px;
+			display: block;
+			width: 100%;
+		}
+		display: flex;
+		justify-content: space-between;
+		margin-top: 30px;
+		img{
+			border-radius: 10px;
+		}
+	}
+	&__block3-item {
+		@for $i from 1 through 2 {
+			&0#{$i} {
+				@include mq(sp) {
+					width: 100%;
+					height: auto;
+				}
+				text-align: center;
+				padding: 20px 0;
+				background: white;
+				border-radius: 10px;
+				font-weight: $font-weight-bold;
+
+				width: (540/1100)*100%;
+				border-radius: 10px;
+			}
+		}
+		@for $i from 1 through 2 {
+			&0#{$i} {
+				@include mq(sp) {
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}

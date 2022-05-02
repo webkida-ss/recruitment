@@ -1,0 +1,16 @@
+// 人について
+.p-person {
+	&__img01 {
+		width: 100%;
+	}
+	&__img02 {
+		@include mq(sp) {
+			margin-top: 30px;
+		}
+		width: 100%;
+		margin-top: 75px;
+		img {
+			border-radius: 5px;
+		}
+	}
+}

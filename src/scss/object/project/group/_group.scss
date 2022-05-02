@@ -1,0 +1,21 @@
+.p-group{
+    &__item{
+        text-align: center;
+        display: block;
+        &:not(:first-child){
+            margin-top: 30px;
+        }
+        > img{
+            width: 50%;
+            margin: 0 auto;
+        }
+        font-size: 2rem;
+        line-height: 1.5;
+        @include mq(sp) {
+            font-size: 1.6rem;
+        }
+        &--inner{
+            margin-top: 10px;
+        }
+    }
+}

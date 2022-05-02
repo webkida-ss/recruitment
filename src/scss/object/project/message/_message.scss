@@ -1,0 +1,62 @@
+// 役員メッセージ
+.p-message {
+	&__img {
+		@include mq(sp) {
+			margin-top: 30px;
+		}
+		width: 100%;
+		margin-top: 60px;
+		>img{
+			border-radius: 10px;
+		}
+	}
+	&__content {
+		@include mq(sp) {
+			margin-top: 20px;
+			// font-size: 1.2rem;
+			// font-size: 1.2px;// 
+			font-size: 1.4rem;// 
+			line-height: 1.5;
+		}
+		margin-top: 50px;
+		font-size: 1.6rem;
+		line-height: (32/16);
+	}
+	&__txt {
+		@for $i from 2 through 5 {
+			&0#{$i} {
+				@include mq(sp) {
+					margin-top: 20px;
+				}
+				margin-top: 40px;
+			}
+		}
+	}
+	&__name {
+		@include mq(sp) {
+			width: 160px;
+			margin-top: 20px;
+			font-size: 1.2rem;
+		}
+		width: 200px;
+		margin: 40px 0 0 auto;
+		font-size: 1.6rem;
+		> p {
+			text-align: left;
+		}
+		&--strong {
+			@include mq(sp) {
+				margin-top: 5px;
+				font-size: 1.6rem;
+			}
+			margin-top: 10px;
+			font-size: 2rem;
+		}
+	}
+	&__btn {
+		@include mq(sp) {
+			margin-top: 30px;
+		}
+		margin: 40px auto 0;
+	}
+}

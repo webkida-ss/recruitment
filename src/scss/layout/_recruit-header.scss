@@ -1,0 +1,256 @@
+.l-recruit-header {
+	@include mq(sp) {
+		padding-left: 0;
+	}
+	@include mq(header-tab) {
+		padding-left: 0;
+	}
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+	width: 100%;
+	max-width: 100vw;
+	height: 83px;
+	padding-left: 36px;
+	background-color: #ffffff;
+
+	&__pc {
+		@include mq(sp) {
+			display: none;
+		}
+		@include mq(header-tab) {
+			display: none;
+		}
+		display: flex;
+		justify-content: flex-end;
+		height: 100%;
+	}
+	&__sp {
+		@include mq(sp) {
+			display: flex;
+		}
+		@include mq(header-tab) {
+			display: flex;
+		}
+		display: none;
+	}
+
+	&__logo {
+		width: 140px;
+		margin-right: auto;
+		> a {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__nav {
+		height: 100%;
+		margin-right: 40px;
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+	&__item {
+
+		@for $i from 1 through 4 {
+			&0#{$i} {
+				font-size: 1.6rem;
+				line-height: 1.2;
+				letter-spacing: .05em;
+				> a {
+					position: relative;
+					&:hover {
+						opacity: 1;
+						color: $mint-green;
+						&::after {
+							width: 100%;
+						}
+					}
+					&::after {
+						@include hoverUnderLine;
+					}
+				}
+			}
+		}
+		@for $i from 2 through 4 {
+			&0#{$i} {
+				margin-left: 30px;
+			}
+		}
+	}
+
+	&__btns {
+		display: flex;
+		width: (660/1564)*100%;
+	}
+
+	&__btn {
+
+		@for $i from 1 through 3 {
+			&0#{$i} {
+				width: 50%;
+				color: #ffffff;
+				font-weight: $font-weight-bold;
+				line-height: 1.2;
+				letter-spacing: .05em;
+				transition: all $change-time ease 0s;
+				&:hover {
+					opacity: $hover-opacity;
+				}
+				span {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 100%;
+					height: 100%;
+					padding: 0 10px;
+				}
+			}
+		}
+		&--green {
+			background-color: $yellow-mad;
+		}
+		&--blue {
+			background-color: $mint-green;
+		}
+		&--pink {
+			background-color: $red-familiy;
+		}
+	}
+}
+.l-recruit-header-sp {
+	height: 100%;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+	}
+	&__logo {
+		@include mq(header-tab) {
+			transform: translateX(20px);
+		}
+		width: 120px;
+	}
+	&__menu {
+		@include mq(header-tab) {
+			transform: translateX(-20px);
+		}
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		z-index: 3;
+		width: 30px;
+		height: 25px;
+		cursor: pointer;
+	}
+	&__bar {
+		@for $i from 1 through 3 {
+			&0#{$i} {
+				display: block;
+				width: 100%;
+				height: 3px;
+				background: black;
+				transition: all $change-time ease 0s;
+			}
+		}
+
+		&01 {
+			&.is-open {
+				transform: translateY(11px) rotate(45deg);
+				background: #ffffff;
+			}
+		}
+		&02 {
+			&.is-open {
+				display: none;
+			}
+		}
+		&03 {
+			&.is-open {
+				transform: translateY(-12px) rotate(-45deg);
+				background: #ffffff;
+			}
+		}
+	}
+
+	&__nav {
+		@include mq(header-tab) {
+			transform: translateX(2000px);
+		}
+		@include mq(sp) {
+			transform: translateX(800px);
+		}
+		position: fixed;
+		z-index: 2;
+		width: 100vw;
+		height: 100vh;
+		background: rgba($color: black, $alpha: .8);
+		color: #ffffff;
+		font-weight: $font-weight-bold;
+		text-align: center;
+		transition: all $change-time ease 0s;
+		&.is-open {
+			transform: translateX(0px);
+		}
+	}
+	&__list {
+		margin-top: 80px;
+	}
+	&__item {
+		@for $i from 1 through 9 {
+			&0#{$i} {
+				margin-top: 40px;
+			}
+		}
+	}
+	// 検索フォーム
+	&__form {
+		margin-top: 40px;
+		padding: 0 10px;
+		form {
+			@include mq(header-tab) {
+				justify-content: center;
+			}
+			display: flex;
+			input[type='text'] {
+				@include mq(header-tab) {
+					width: 300px;
+				}
+				flex-shrink: 0;
+				width: getMinus100Percent(100px);
+				height: 45px;
+				padding: 0 5px;
+			}
+			input[type='submit'] {
+				flex-shrink: 0;
+				width: 80px;
+				height: 45px;
+				margin-left: 15px;
+				border: 1px solid $mint-green;
+				border-radius: 5px;
+				background: $mint-green;
+				color: white;
+				cursor: pointer;
+			}
+		}
+	}
+	&__btn {
+		height: 60px;
+		margin: 80px 20px 0;
+		transition: all $change-time ease 0s;
+		&:hover {
+			opacity: $hover-opacity;
+		}
+		> a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}

@@ -1,0 +1,154 @@
+.c-btn {
+	@include mq(sp) {
+		width: 230px;
+		height: 45px;
+		font-size: 1.4rem;
+		line-height: 45px;
+	}
+	position: relative;
+	width: 317px;
+	max-width: 100%;
+	height: 50px;
+	border: 1px solid;
+	border-radius: 25px;
+	color: #fff;
+	font-weight: $font-weight-bold;
+	font-size: 1.6rem;
+	line-height: 50px;
+	letter-spacing: .05em;
+	text-align: center;
+	transition: all $change-time ease 0s;
+	> a {
+		display: block;
+		width: 100%;
+		height: 100%;
+		transition: all $change-time ease 0s;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	// お問い合わせボタン用
+	> button {
+		display: block;
+		width: 100%;
+		height: 100%;
+		border: none;
+		background: transparent;
+		color: inherit;
+		cursor: pointer;
+	}
+	&::after {
+		@include mq(sp) {
+			padding-left: 3px;
+		}
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		transform: translateY(-50%);
+		width: 20px;
+		height: 20px;
+		padding-left: 4px;
+		border-radius: 50%;
+		background: #fff;
+		font-weight: $font-weight-bold;
+		font-size: 1rem;
+		text-align: center;
+		content: '→';
+	}
+	&--blue {
+		background: $mint-green;
+		&::after {
+			color: $mint-green;
+		}
+		&:hover {
+			border: 1px solid $mint-green;
+			background: white;
+			color: $mint-green;
+			&::after {
+				background: $mint-green;
+				color: white;
+			}
+		}
+	}
+	&--green {
+		background: $yellow-mad;
+		&::after {
+			color: $yellow-mad;
+		}
+		&:hover {
+			border: 1px solid $yellow-mad;
+			background: white;
+			color: $yellow-mad;
+			&::after {
+				background: $yellow-mad;
+				color: white;
+			}
+		}
+	}
+	&--orange {
+		background: $blue-dark;
+		&::after {
+			color: $blue-dark;
+		}
+		&:hover {
+			border: 1px solid $blue-dark;
+			background: white;
+			color: $blue-dark;
+			&::after {
+				background: $blue-dark;
+				color: white;
+			}
+		}
+	}
+	&--pink {
+		background: $red-familiy;
+		&::after {
+			color: $red-familiy;
+		}
+		&:hover {
+			border: 1px solid $red-familiy;
+			background: white;
+			color: $red-familiy;
+			&::after {
+				background: $red-familiy;
+				color: white;
+			}
+		}
+	}
+	&--gray {
+		background: $gray;
+		&::after {
+			color: $gray;
+		}
+		&:hover {
+			border: 1px solid $gray;
+			background: white;
+			color: $gray;
+			&::after {
+				background: $gray;
+				color: white;
+			}
+		}
+	}
+	&--white-blue {
+		border: 1px solid $mint-green;
+		background: white;
+		color: $mint-green;
+		&::after {
+			background: $mint-green;
+			color: white;
+		}
+		&:hover {
+			border: 1px solid white;
+			background: $mint-green;
+			color: white;
+			&::after {
+				background: white;
+				color: $mint-green;
+			}
+		}
+	}
+}

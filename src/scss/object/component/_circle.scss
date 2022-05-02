@@ -1,0 +1,61 @@
+.c-circle {
+	@include mq(sp) {
+		width: 40px;
+		height: 40px;
+		padding-left: 3px;
+		font-size: 2rem;
+	}
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	// 基本サイズ ----
+	width: 60px;
+	height: 60px;
+	padding-left: 4px;
+	border-radius: 50%;
+	background: $mint-green;
+	// 基本カラー
+	color: #fff;
+	font-weight: $font-weight-bold;
+	font-size: 3rem;
+	content: '→';
+
+	// サイズ ------------------------------------------------------------
+	&--medium {
+		@include mq(sp) {
+			width: 20px;
+			height: 20px;
+			padding-left: 2px;
+			font-size: 1.4rem;
+		}
+		width: 30px;
+		height: 30px;
+		padding-left: 3px;
+		font-size: 2rem;
+	}
+	&--xsmall {
+		width: 15px;
+		height: 15px;
+		padding-left: 2px;
+		font-size: 1rem;
+	}
+
+	// 色 ------------------------------------------------------------
+	&--orange {
+		background: $blue-dark;
+	}
+	&--white {
+		&-pink {
+			background: #fff;
+			color: $red-familiy;
+		}
+		&-green {
+			background: #fff;
+			color: $yellow-mad;
+		}
+		&-blue {
+			background: #fff;
+			color: $mint-green;
+		}
+	}
+}

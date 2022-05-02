@@ -1,0 +1,95 @@
+.u-page {
+	&-px {
+		@include mq(sp) {
+			padding-right: 0;
+			padding-left: 0;
+		}
+		padding-right: 90px;
+		padding-left: 90px;
+	}
+	&-py {
+		@include mq(sp) {
+			padding-top: 50px;
+			padding-bottom: 100px;
+		}
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+	&-pt {
+		@include mq(sp) {
+			padding-top: 50px;
+		}
+		padding-top: 120px;
+		&-80{
+			padding-top: 80px;
+			@include mq(sp) {
+				padding-top: 40px;
+			}
+		}
+	}
+	&-pb {
+		@include mq(sp) {
+			padding-bottom: 100px;
+		}
+		padding-bottom: 120px;
+	}
+
+	&-bb {
+		@include mq(sp) {
+			border-bottom-style: none;
+			&.is-display-sp{
+				border-bottom-style: solid;
+			}
+		}
+
+		border-bottom: 1px solid #d0d0d0;
+	}
+	&-title {
+		@include mq(sp) {
+			padding-bottom: 10px;
+			font-size: 2.3rem;
+		}
+		position: relative;
+		padding-bottom: 15px;
+		color: $mint-green;
+		font-size: 3.6rem;
+		letter-spacing: .02em;
+		text-align: center;
+		&::after {
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 115px;
+			height: 3px;
+			background: $mint-green;
+			content: '';
+		}
+		&--green {
+			color: $yellow-mad;
+			&::after {
+				background: $yellow-mad;
+			}
+		}
+		&--pink {
+			color: $red-familiy;
+			&::after {
+				background: $red-familiy;
+			}
+		}
+		&--orange {
+			color: $blue-dark;
+			&::after {
+				background: $blue-dark;
+			}
+		}
+		&--sp-small{
+			&::after{
+				@include mq(sp) {
+					width: 62px;
+				}
+			}
+		}
+	}
+}

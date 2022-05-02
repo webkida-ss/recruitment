@@ -1,0 +1,162 @@
+// 募集要項
+.p-description {
+	&__links {
+		@include mq(sp) {
+			margin-top: 40px;
+			font-size: 1.2rem;
+		}
+		display: flex;
+		justify-content: center;
+		margin-top: 60px;
+		font-weight: $font-weight-bold;
+		font-size: 1.8rem;
+		> p {
+			position: relative;
+			&:not(:first-child) {
+				@include mq(sp) {
+					margin-left: 30px;
+				}
+				margin-left: 40px;
+			}
+		}
+	}
+	&__triangle {
+		position: absolute;
+		top: 50%;
+		left: -15px;
+	}
+	&__item {
+		&:first-child {
+			@include mq(sp) {
+				margin-top: 30px;
+			}
+			margin-top: 60px;
+		}
+		&:not(:first-child) {
+			@include mq(sp) {
+				margin-top: 50px;
+			}
+			margin-top: 90px;
+		}
+	}
+	&__title {
+		@include mq(sp) {
+			margin-bottom: 20px;
+			font-size: 2rem;
+			line-height: 1.2;
+		}
+		margin-bottom: 30px;
+		color: $mint-green;
+		font-weight: $font-weight-bold;
+		font-size: 2.4rem;
+	}
+	&__notice {
+		@include mq(sp) {
+			margin-top: 20px;
+		}
+		margin-top: 35px;
+	}
+}
+.p-description-table {
+	$light-blue: #ebf7ff;
+	$gray: #707070;
+	$border: 1px solid $gray;
+	$col1-pc: 70px;
+	$col1-sp: 35px;
+	$col2-pc: 180px;
+	$col2-sp: 90px;
+	@include mq(sp) {
+		font-size: 1.2rem;
+		line-height: 1.5;
+	}
+	width: 100%;
+	// color: $gray;
+	color: #000;
+	font-size: 1.6rem;
+	line-height: (32/16);
+
+	border-top: $border;
+	border-bottom: $border;
+
+	// block
+	&-main {
+
+		&__item {
+			display: flex;
+			align-items: stretch;
+			border-bottom: $border;
+			> dt {
+				flex-shrink: 0;
+				display: flex;
+				align-items: center;
+				@include mq(sp) {
+					width: $col1-sp + $col2-sp;
+					padding: 10px;
+				}
+				width: $col1-pc + $col2-pc;
+				padding: 20px;
+				padding: 20px;
+				background: $light-blue;
+				font-weight: $font-weight-bold;
+			}
+			>dd{
+				padding: 20px;
+				@include mq(sp) {
+					padding: 10px;
+				}
+			}
+		}
+	}
+	&-sub {
+		display: flex;
+		align-items: stretch;
+		// 待遇
+		&__treatment {
+			@include mq(sp) {
+				width: $col1-sp;
+			}
+			flex-shrink: 0;
+			width: $col1-pc;
+			font-weight: $font-weight-bold;
+			
+			background: $light-blue;
+			display: flex;
+			align-items: center;
+			border-right: $border;
+			span{
+				text-align: center;
+				width: 100%;
+				display: inline-block;
+			}
+		}
+		&__list {
+			flex: 1;
+		}
+		&__item {
+			display: flex;
+			align-items: stretch;
+			&:not(:last-child){
+				border-bottom: $border;
+			}
+			> dt {
+				display: flex;
+				@include mq(sp) {
+					width: $col2-sp;
+					padding: 10px;
+				}
+				flex-shrink: 0;
+				width: $col2-pc;
+				padding: 20px;
+				background: $light-blue;
+				font-weight: $font-weight-bold;
+				align-items: center;
+			}
+			> dd {
+				@include mq(sp) {
+					padding: 10px;
+				}
+				padding: 20px;
+			}
+		}
+	}
+}

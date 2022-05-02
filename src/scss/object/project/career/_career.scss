@@ -1,0 +1,107 @@
+// キャリア採用情報
+.p-career {
+
+	&__title {
+		color: $yellow-mad !important;
+	}
+	&__title::after {
+		background: $yellow-mad !important;
+	}
+	&__txt01 {
+		@include mq(sp) {
+			margin-top: 20px;
+			font-size: 1.4rem;
+			line-height: 1.5;
+		}
+		margin-top: 40px;
+	}
+	&__img {
+		@include mq(sp) {
+			margin-top: 20px;
+		}
+		width: 100%;
+		margin-top: 40px;
+
+		.pc {
+			@include mq(sp) {
+				display: none;
+			}
+			display: block;
+		}
+		.sp {
+			@include mq(sp) {
+				display: block;
+			}
+			display: none;
+		}
+	}
+	&__txt02 {
+		@include mq(sp) {
+			margin-top: 10px;
+			font-size: 1.4rem;
+			line-height: 1.5;
+		}
+		margin-top: 25px;
+	}
+	&__txt03 {
+		@include mq(sp) {
+			margin-top: 30px;
+			font-size: 1.6rem;
+		}
+		margin-top: 65px;
+		color: $yellow-mad;
+		font-weight: $font-weight-bold;
+		font-size: 2rem;
+	}
+	&__txt04 {
+		@include mq(sp) {
+			margin-top: 10px;
+			font-size: 1.4rem;
+			line-height: 1.5;
+		}
+		margin-top: 20px;
+		line-height: (32/16);
+	}
+	&__txt05 {
+		@include mq(sp) {
+			margin-top: 20px;
+			font-size: 1.6rem;
+		}
+		margin-top: 35px;
+		color: $yellow-mad;
+		font-weight: $font-weight-bold;
+		font-size: 2rem;
+	}
+	&__list {
+		@include mq(sp) {
+			margin-top: 10px;
+			font-size: 1.4rem;
+			line-height: 1.5;
+		}
+		margin-top: 15px;
+		padding-left: 20px;
+		line-height: (32/16);
+		> li {
+			position: relative;
+			&::before {
+				position: absolute;
+				top: 50%;
+				left: -20px;
+				transform: translateY(-50%);
+				content: '・';
+			}
+		}
+	}
+	&__notice {
+		@include mq(sp) {
+			margin-top: 30px;
+		}
+		margin-top: 60px;
+		a {
+			color: $yellow-mad !important;
+		}
+		a::after {
+			background: $yellow-mad !important;
+		}
+	}
+}

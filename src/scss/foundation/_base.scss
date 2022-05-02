@@ -1,0 +1,66 @@
+// -----------------------------------------------------------------
+// setting
+// -----------------------------------------------------------------
+
+// カラー(必要に応じて変更すること)
+$mint-green: #00979b;
+$yellow-mad: #ebd880;
+$blue-dark: #3994fc;
+$red-familiy: #c04619;
+$yellow: #fffee5;
+$light-pink: #fff7f7;
+$gray: #707070;
+$color-background-base: #ffffff; // 背景色
+$color-text-base: black; // テキスト色
+$hover-opacity: .7; // 透過度
+
+// 余白
+$padding-pc: 160px;
+$padding-sp: 25px;
+
+// レイアウト幅
+$layout-width-canvas-pc: 1600px;
+$layout-width-inner-pc: $layout-width-canvas-pc - ($padding-pc * 2);
+$layout-width-canvas-sp: 400px;
+$layout-width-inner-sp: $layout-width-canvas-sp - ($padding-sp * 2);
+
+// トランジションタイム
+$change-time: .5s;
+
+// フォント
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Titillium+Web:wght@600&display=swap');
+@import url('https://use.typekit.net/zrg8kaf.css');// oswald
+$font-family-default: 'Noto Sans JP', sans-serif;
+$font-family-titillium: 'Titillium Web', sans-serif;// セミボールド
+$font-family-gothic: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', 'sans-serif';
+$font-family-oswald: oswald, sans-serif;
+$font-family-base: $font-family-default;
+$font-weight-base: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$line-height-base: 1;// 基本設定
+$font-size-base: 1.6rem; // 基準サイズ
+
+// ブレイクポイント
+$max-width-sp: 767;
+$max-width-tab: 959;
+$max-width-tab-wide: 1320;
+$max-width-tab-hd-ft: 1285;
+$breakpoints: (
+	'sp': '(max-width: #{$max-width-sp}px)',
+	'pc': '(min-width: #{$max-width-sp + 1}px)', // 768〜
+	'header-tab': '(min-width: #{$max-width-sp + 1}px) and (max-width: #{$max-width-tab-hd-ft}px)',
+	'footer-tab': '(min-width: #{$max-width-sp + 1}px) and (max-width: #{$max-width-tab-hd-ft}px)',
+	'top-tab': '(min-width: #{$max-width-sp + 1}px) and (max-width: #{$max-width-tab-wide}px)',
+	'project-tab': '(min-width: #{$max-width-sp + 1}px) and (max-width: #{$max-width-tab-wide}px)',
+	'interview-pc': '(min-width: #{$max-width-tab-wide + 1}px)', 
+	'interview-tab': '(min-width: #{$max-width-sp + 1}px) and (max-width: #{$max-width-tab-wide}px)',
+	'environment-tab': '(min-width: #{$max-width-sp + 1}px) and (max-width: #{$max-width-tab-wide}px)',
+	'footer-btn-tab': '(min-width: #{$max-width-sp + 1}px) and (max-width: 930px)',
+	'recruit-top-tab': '(min-width: #{$max-width-sp + 1}px) and (max-width:  #{$max-width-tab-wide}px)',
+	'recruit-link-pc': '(min-width: #{$max-width-tab + 1}px) ',
+	'recruit-link-tab': '(min-width: #{$max-width-sp + 1}px) and (max-width: #{$max-width-tab}px)',
+	'contact-tab': '(min-width: #{$max-width-sp + 1}px) and (max-width: #{$max-width-tab}px)', 
+	'person-list-tab': '(min-width: #{$max-width-sp + 1}px) and (max-width:  #{$max-width-tab-wide}px)', 
+
+);

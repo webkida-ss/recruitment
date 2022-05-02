@@ -1,0 +1,395 @@
+// カスタム投稿ページ ---------------------------------------------------------------------------------------------------
+.p-single-interview {
+
+	&__main {
+		@include mq(sp) {
+			margin-top: 60px;
+		}
+		margin-top: 120px;
+	}
+	// 他のメンバーを見る
+	&__person {
+		@include mq(sp) {
+			margin-top: 65px;
+			padding-bottom: 0;
+		}
+		margin-top: 140px;
+		padding-bottom: 60px;
+	}
+}
+.p-single-interview-top {
+	&__inner {
+		background: rgba($color: $yellow-mad, $alpha: .1);
+	}
+	&__main {
+		@include mq(sp) {
+			flex-direction: column-reverse;
+			position: relative;
+			padding: 100px 0 30px;
+		}
+		display: flex;
+	}
+	&__txt {
+		@include mq(sp) {
+			z-index: 2;
+			width: 100%;
+			padding: 0;
+		}
+		flex-shrink: 0;
+		width: 50%;
+		padding: 70px 40px 30px 0;
+	}
+	&__title {
+		@include mq(interview-tab) {
+			padding-left: 30px;
+		}
+		@include mq(sp) {
+			position: absolute;
+			top: 30px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: (520/700)*100%;
+		}
+		width: (372/600)*100%;
+	}
+	&__top-msg {
+		@include mq(sp) {
+			position: relative;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			width: 100vw;
+			margin: 0 auto 0 0;
+			padding-right: 35px;
+		}
+		margin-top: 20px;
+		> p {
+			@include mq(sp) {
+				padding: 10px 20px;
+				font-size: 2.1rem;
+				line-height: (62/42);
+			}
+			padding: 20px 30px;
+			background: $red-familiy;
+			color: white;
+			font-weight: $font-weight-bold;
+			font-size: 3.4rem;
+			line-height: (50/34);
+			letter-spacing: .05em;
+		}
+	}
+	&__name {
+		@include mq(sp) {
+			margin-top: 0;
+			padding: 0;
+			font-size: 2.1rem;
+		}
+		margin-top: 20px;
+		padding-left: 10px;
+		color: $red-familiy;
+		font-weight: $font-weight-bold;
+		font-size: 3rem;
+		letter-spacing: .05em;
+	}
+	&__other {
+		@include mq(sp) {
+			margin-top: 10px;
+			padding: 0;
+			font-size: 1.2rem;
+			line-height: (32/24);
+		}
+		margin-top: 15px;
+		padding-left: 10px;
+		font-size: 1.6rem;
+		line-height: (26/16);
+		letter-spacing: .05em;
+	}
+
+	&__img {
+		&--inner {
+			@include mq(sp) {
+				position: relative;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 100vw;
+			}
+			width: 50vw;
+			> img {
+				width: 100%;
+				border-radius: 5px;
+			}
+		}
+	}
+	&__breadcrumb {
+		@include mq(sp) {
+			display: none;
+		}
+		margin-top: 20px;
+		text-align: right;
+	}
+}
+.p-single-interview-main {
+	&__item {
+		&:not(:first-child) {
+			@include mq(sp) {
+				margin-top: 70px;
+			}
+			margin-top: 100px;
+		}
+	}
+}
+.p-single-interview-main-item {
+	@include mq(interview-tab) {
+		display: block;
+	}
+	@include mq(sp) {
+		display: block;
+	}
+	display: flex;
+	&.is-reverse {
+		flex-direction: row-reverse;
+	}
+	&__txt {
+		@include mq(interview-tab) {
+			width: 100%;
+		}
+		@include mq(sp) {
+			width: 100%;
+			padding: 0;
+		}
+		flex-shrink: 0;
+		width: 50%;
+		// padding-right: 30px;
+		padding: 0 30px;
+		&.is-reverse {
+			@include mq(sp) {
+				padding: 0;
+			}
+			// padding-right: 0;
+			// padding-left: 30px;
+		}
+	}
+	&__summary {
+		@include mq(sp) {
+			padding-bottom: 15px;
+			font-size: 1.9rem;
+			line-height: (50/38);
+			letter-spacing: .02em;
+		}
+		position: relative;
+		padding-bottom: 30px;
+		color: $red-familiy;
+		font-weight: $font-weight-bold;
+		font-size: 2.8rem;
+		line-height: (42/28);
+		letter-spacing: .05em;
+		&::after {
+			@include mq(sp) {
+				width: 27.5px;
+				height: 1.5px;
+			}
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 55px;
+			height: 3px;
+			background: $red-familiy;
+			content: '';
+		}
+	}
+	&__title {
+		@include mq(sp) {
+			margin-top: 15px;
+			font-size: 1.6rem;
+			letter-spacing: .02em;
+		}
+		line-height: 1.5;
+		margin-top: 30px;
+		font-weight: $font-weight-bold;
+		font-size: 2rem;
+		letter-spacing: .05em;
+	}
+	&__detail {
+		@include mq(sp) {
+			margin-top: 15px;
+			font-size: 1.4rem;
+			line-height: (48/28);
+		}
+		margin-top: 20px;
+		font-size: 1.6rem;
+		line-height: (32/16);
+		letter-spacing: .05em;
+	}
+	&__img {
+		@include mq(interview-tab) {
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 50vw;
+			margin-top: 30px;
+		}
+		@include mq(sp) {
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100vw;
+			margin-top: 30px;
+		}
+		position: relative;
+		height: fit-content;
+		border-radius: 5px;
+		&--inner {
+			@include mq(interview-tab) {
+				width: 100%;
+			}
+			@include mq(sp) {
+				width: 100%;
+			}
+			position: relative;
+			z-index: 2;
+			width: 50vw;
+			padding-left: 30px;
+			> img {
+				width: 100%;
+				border-radius: 15px;
+			}
+			&.is-reverse {
+				padding-right: 30px;
+				padding-left: 0;
+			}
+		}
+		&.is-reverse {
+			&::after {
+				right: 0;
+				left: auto;
+			}
+		}
+		&::after {
+			@include mq(sp) {
+				top: 20px;
+			}
+			display: block;
+			position: absolute;
+			top: 30px;
+			left: 0px;
+			z-index: 1;
+			width: calc(100% - 30px);
+			height: 100%;
+			border-radius: 15px;
+			background: rgba($color: $yellow-mad, $alpha: .1);
+			content: '';
+		}
+	}
+}
+// 他のメンバーを見る
+.p-single-interview-person {
+	margin-top: 20px;
+	background: rgba($color: $yellow-mad, $alpha: .1);
+	&__inner {
+		@include mq(sp) {
+			padding: 40px 0;
+		}
+		padding: 80px 0;
+	}
+}
+
+
+// 固定ページ ---------------------------------------------------------------------------------------------------
+.p-archive-interview {
+
+	&__main {
+		@include mq(sp) {
+			margin-top: 55px;
+			padding-bottom: 60px;
+		}
+		margin-top: 120px;
+		padding-bottom: 105px;
+	}
+	&__occupation {
+		@include mq(sp) {
+			padding-bottom: 35px;
+		}
+		padding-bottom: 50px;
+		&:not(:first-child) {
+			@include mq(sp) {
+				margin-top: 40px;
+			}
+			margin-top: 60px;
+		}
+	}
+
+	// 1つの部の中のリスト
+	&__list {
+		@include mq(project-tab) {
+			padding: 0 20px;
+		}
+		@include mq(sp) {
+			margin-top: 25px;
+		}
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		margin-top: 45px;
+	}
+	&__item {
+		@include mq(interview-pc) {
+			$item-margin: 10px;
+			$item-num: 4;
+			width: getCardWith($item-margin,$item-num);
+			// 余白 - 上
+			&:not(:nth-child(-n+#{$item-num})) {
+				margin-top: 30px;
+			}
+			// 余白 - 左
+			&:not(:nth-child(#{$item-num}n+1)) {
+				margin-left: $item-margin;
+			}
+		}
+		@include mq(interview-tab) {
+			$item-margin: 10px;
+			$item-num: 3;
+			width: getCardWith($item-margin,$item-num);
+			// 余白 - 上
+			&:not(:nth-child(-n+#{$item-num})) {
+				margin-top: 30px;
+			}
+			// 余白 - 左
+			&:not(:nth-child(#{$item-num}n+1)) {
+				margin-left: $item-margin;
+			}
+		}
+		@include mq(sp) {
+			$item-margin: 10px;
+			$item-num: 2;
+			width: getCardWith($item-margin,$item-num);
+			// 余白 - 上
+			&:not(:nth-child(-n+#{$item-num})) {
+				margin-top: 10px;
+			}
+			// 余白 - 左
+			&:not(:nth-child(#{$item-num}n+1)) {
+				margin-left: $item-margin;
+			}
+		}
+	}
+	&__project {
+		width: 100%;
+		> img {
+			width: 100%;
+			border-radius: 5px;
+		}
+	}
+}
+.p-archive-interview-item {
+	&__img {
+		position: relative;
+		padding-top: (207/311)*100%;
+		> img {
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			object-fit: cover;
+		}
+	}
+}

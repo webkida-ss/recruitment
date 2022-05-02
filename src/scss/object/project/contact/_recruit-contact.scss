@@ -1,0 +1,323 @@
+// お問い合わせ
+.p-recruit-contact {
+	&__txt {
+		@include mq(sp) {
+			margin-top: 30px;
+			font-size: 1.4rem;
+			line-height: 1.5;
+		}
+		margin-top: 60px;
+		font-size: 1.6rem;
+		line-height: (32/16);
+		text-align: center;
+	}
+	&__form {
+		@include mq(sp) {
+			margin-top: 40px;
+		}
+		margin-top: 80px;
+		background: rgba($color: $blue-dark, $alpha: .1);
+	}
+}
+.p-recruit-contact-form {
+	@include mq(sp) {
+		padding: 40px 0;
+		font-size: 1.4rem;
+	}
+	padding: 80px 0;
+	&__list {
+		@include mq(contact-tab) {
+			padding: 0;
+		}
+		@include mq(sp) {
+			padding: 0;
+		}
+		padding: 0 (125/1100)*100%;
+	}
+	&__item {
+		@for $i from 1 through 9 {
+			&0#{$i} {
+				@include mq(sp) {
+					display: block;
+				}
+				display: flex;
+				align-items: center;
+				&.is-top {
+					align-items: flex-start;
+				}
+			}
+		}
+		@for $i from 2 through 9 {
+			&0#{$i} {
+				margin-top: 20px;
+			}
+		}
+	}
+	&__label {
+		width: 180px;
+		@include mq(contact-tab) {
+			width: 140px;
+		}
+		&--required {
+			> span {
+				position: relative;
+				&::after {
+					@include mq(sp) {
+						width: 40px;
+					}
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					position: absolute;
+					top: 50%;
+					right: -70px;
+					transform: translateY(-50%);
+					width: 52px;
+					height: 20px;
+					background: $red-familiy;
+					color: white;
+					font-size: 1.4rem;
+					content: '必須';
+				}
+			}
+		}
+		&--content {
+			padding-top: 30px;
+		}
+	}
+	&__input,
+	&__textarea {
+		@include mq(sp) {
+			margin-top: 10px;
+		}
+		flex: 1;
+		&--address1 {
+			@include mq(sp) {
+				min-width: 100%;
+			}
+			max-width: 207px;
+		}
+		> input,
+		> textarea {
+			width: 100%;
+			border: none;
+			border-radius: 5px;
+			font-size: 1.6rem;
+			outline: none;
+			transition: all $change-time ease 0s;
+			&:focus,
+			&:hover {
+				box-shadow: 0px 0px 5px 0px $mint-green;
+			}
+		}
+		> input {
+			@include mq(sp) {
+				height: 40px;
+				padding-left: 10px;
+			}
+			height: 60px;
+			padding-left: 30px;
+		}
+		> textarea {
+			@include mq(sp) {
+				padding: 10px;
+			}
+			height: 200px;
+			padding: 30px;
+			line-height: (32/16);
+			resize: none;
+		}
+	}
+	&__privacy-txt {
+		@include mq(sp) {
+			margin-top: 30px;
+			line-height: 1.6;
+		}
+		margin-top: 65px;
+		text-align: center;
+		> a {
+			&::after {
+				bottom: -5px;
+			}
+		}
+	}
+	&__privacy-check {
+		margin-top: 20px;
+		text-align: center;
+		.mwform-radio-field {
+			display: inline-block;
+			> label {
+				display: flex;
+				align-items: center;
+				> .mwform-radio-field-text {
+					margin-left: 5px;
+				}
+			}
+		}
+	}
+
+	// お問い合わせ
+	&__privacy-check-fonfirm {
+		display: none;
+		margin-top: 65px;
+		text-align: center;
+		span {
+			position: relative;
+			&::before {
+				position: absolute;
+				top: 50%;
+				left: -20px;
+				transform: translateY(-50%) rotate(-45deg);
+				width: 12px;
+				height: 6px;
+				content: '';
+
+				border-left: 2px solid $red-familiy;
+				border-bottom: 2px solid $red-familiy;
+			}
+		}
+	}
+
+	&__btn {
+		@include mq(sp) {
+			margin-top: 30px;
+		}
+		margin: 50px auto 0;
+	}
+	&__notice {
+		@include mq(sp) {
+			margin-top: 30px;
+			padding: 20px;
+		}
+		width: 100%;
+		margin-top: 60px;
+		padding: 60px 75px;
+		border: none;
+		background: white;
+		line-height: (32/16);
+		text-align: left;
+		outline: none;
+
+		&--inner {
+			@include mq(sp) {
+				height: 200px;
+			}
+			height: 266px;
+			overflow-x: auto;
+			overflow-y: scroll;
+		}
+		&--strong {
+			@include mq(sp) {
+				margin-top: 5px;
+				font-size: 1.4rem;
+			}
+			display: inline-block;
+			margin-bottom: 10px;
+			color: $mint-green;
+			font-weight: $font-weight-bold;
+			font-size: 2.4rem;
+		}
+	}
+}
+// 入力画面
+.mw_wp_form_input {
+	.p-recruit-contact-form__btn--back,
+	.p-recruit-contact-form__btn--send {
+		display: none;
+	}
+}
+// 確認画面
+.mw_wp_form_confirm {
+
+	.p-recruit-contact-form__input--address1 {
+		flex: 1;
+		width: auto;
+	}
+	.p-recruit-contact-form__label--required {
+		> span {
+			position: relative;
+		}
+	}
+	.p-recruit-contact-form__label--content {
+		padding-top: 0;
+	}
+	.p-recruit-contact-form__btn--confirm {
+		display: none;
+	}
+	.p-recruit-contact-form__notice,
+	.p-recruit-contact-form__privacy-txt,
+	.p-recruit-contact-form__privacy-check {
+		display: none;
+	}
+
+	.p-recruit-contact-form__item {
+		@for $i from 2 through 9 {
+			&0#{$i} {
+				margin-top: 30px;
+			}
+		}
+	}
+
+	// 同意する
+	.p-recruit-contact-form__privacy-check-fonfirm {
+		display: block;
+	}
+
+	// テキストエリア行間
+	.p-recruit-contact-form__textarea {
+		line-height: (32/16);
+	}
+	.p-recruit-contact-form__textarea,
+	.p-recruit-contact-form__input {
+		@include mq(sp) {
+			padding-left: 5px;
+		}
+		padding-left: 20px;
+	}
+
+	// 下線 ------------------------------------------------------------
+	label,
+	.p-recruit-contact-form__textarea,
+	.p-recruit-contact-form__input {
+		@include mq(sp) {
+			padding-bottom: 20px;
+		}
+		padding-bottom: 30px;
+	}
+	.p-recruit-contact-form__textarea,
+	.p-recruit-contact-form__input {
+		border-bottom: 1px solid #afafaf;
+	}
+	// ----------------------------------------------------------------
+}
+// 完了画面
+.p-recruit-contact-complete {
+	@include mq(sp) {
+		padding: 0 0 70px 0;
+	}
+	padding: 0 0 140px 0;
+	&__title {
+		@include mq(sp) {
+			font-size: 1.8rem;
+		}
+		color: $mint-green;
+		font-weight: $font-weight-bold;
+		font-size: 3.6rem;
+		text-align: center;
+	}
+	&__txt {
+		@include mq(sp) {
+			margin-top: 30px;
+			font-size: 1.4rem;
+		}
+		margin-top: 65px;
+		line-height: (32/16);
+		text-align: center;
+	}
+	&__btn {
+		@include mq(sp) {
+			margin-top: 70px;
+		}
+		margin: 140px auto 0;
+	}
+}

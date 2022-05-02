@@ -1,0 +1,86 @@
+@charset 'UTF-8';
+
+// ==========================================================================
+// Foundation
+// ==========================================================================
+
+@import 'foundation/_reset';// リセットCSS
+@import 'foundation/_base';// 基本設定
+@import 'foundation/_mixin';// ミックスイン
+@import 'foundation/_function';// ファンクション
+@import 'foundation/_initialize';// 初期化
+
+// ==========================================================================
+// Layout
+// ==========================================================================
+
+@import 'layout/_recruit-header';// ヘッダー
+@import 'layout/_recruit-footer';// フッター
+
+// ==========================================================================
+// Object
+// ==========================================================================
+
+// -----------------------------------------------------------------
+// Component
+// -----------------------------------------------------------------
+
+@import 'object/component/_inner';// インナー
+@import 'object/component/_button';// ボタン
+@import 'object/component/_circle';// 丸
+@import 'object/component/_triangle';// 三角
+@import 'object/component/_recruit-top';// 採用情報トップ
+@import 'object/component/_entry-link';// 各種エントリーリンク
+@import 'object/component/_privacy-notice';// 東保書類は当社にて適切に管理いたします。〜
+@import 'object/component/_fade-in';// ふわっと表示
+@import 'object/component/_person';
+@import 'object/component/_recruit-archive-top';// アーカイブトップ
+@import 'object/component/_recruit-link';// 新卒採用情報リンク一覧
+
+// -----------------------------------------------------------------
+// Project
+// -----------------------------------------------------------------
+// 採用情報トップ
+@import 'object/project/_top';
+// 役員メッセージ
+@import 'object/project/message/_message';
+// 会社について
+@import 'object/project/company/_company';// 会社について
+// 人について
+@import 'object/project/person/_person';// 人について
+@import 'object/project/person/_project';// プロジェクトストーリー
+@import 'object/project/person/_interview';
+// 仕事について
+@import 'object/project/work/_work';
+// 働く環境について
+@import 'object/project/environment/_environment';
+// 新卒採用情報
+@import 'object/project/information/_information';// 新卒採用情報
+@import 'object/project/information/_event';// 新卒向けイベントのご案内
+@import 'object/project/information/_flow';// 選考の流れ
+@import 'object/project/information/_traning';// 研修制度
+@import 'object/project/information/_carrier-path';// キャリアステップ
+@import 'object/project/information/_qa';// よくある質問
+@import 'object/project/information/_description';// 募集要項
+// キャリア採用情報
+@import 'object/project/career/_career';// キャリア採用情報
+// お問い合わせ
+@import 'object/project/contact/_recruit-contact';// お問い合わせ（採用情報）
+// 検索結果
+@import 'object/project/result/_result';// 検索結果
+// 本サイトの利用について、プライバシーポリシー
+@import 'object/project/guide/_guide';
+// グループ採用情報
+@import 'object/project/group/_group';
+
+// -----------------------------------------------------------------
+// Utility
+// -----------------------------------------------------------------
+@import 'object/utility/_font-size'; // 文字サイズ調整
+@import 'object/utility/_letter-spacing'; // 文字間調整
+@import 'object/utility/_display'; // 表示制御
+@import 'object/utility/_page'; // ページ関連
+@import 'object/utility/_href'; // aタグ関連　
+@import 'object/utility/_breadcrumb'; // パンくずリスト
+@import 'object/utility/_color'; // 色
+@import 'object/utility/_margin'; // マージン

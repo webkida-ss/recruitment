@@ -1,0 +1,73 @@
+.c-recruit-link {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	&__btn {
+		@include mq(recruit-link-pc) {
+			$item-margin: 20px;
+			$item-num: 3;
+			width: getCardWith($item-margin,$item-num);
+			// 余白 - 上
+			&:not(:nth-child(-n+#{$item-num})) {
+				margin-top: 10px;
+			}
+			// 余白 - 左
+			&:not(:nth-child(#{$item-num}n+1)) {
+				margin-left: $item-margin;
+			}
+		}
+		@include mq(recruit-link-tab) {
+			$item-margin: 10px;
+			$item-num: 2;
+			width: getCardWith($item-margin,$item-num);
+			// 余白 - 上
+			&:not(:nth-child(-n+#{$item-num})) {
+				margin-top: 10px;
+			}
+			// 余白 - 左
+			&:not(:nth-child(#{$item-num}n+1)) {
+				margin-left: $item-margin;
+			}
+		}
+		@include mq(sp) {
+			$item-margin: 10px;
+			$item-num: 2;
+			width: getCardWith($item-margin,$item-num);
+			// 余白 - 上
+			&:not(:nth-child(-n+#{$item-num})) {
+				margin-top: 10px;
+			}
+			// 余白 - 左
+			&:not(:nth-child(#{$item-num}n+1)) {
+				margin-left: $item-margin;
+			}
+		}
+		border-radius: 10px;
+		line-height: 1.1;
+		> a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			text-align: center;
+			> span {
+				@include mq(sp) {
+					width: 100%;
+					transform: translateX(-5px);
+				}
+				display: inline-block;
+				width: 60%;
+			}
+		}
+
+		// 共通ボタン上書き
+		&.c-btn {
+			&::after {
+				@include mq(sp) {
+					right: 5px;
+				}
+			}
+		}
+	}
+}

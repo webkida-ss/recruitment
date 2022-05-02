@@ -1,0 +1,17 @@
+.p-guide {
+    h2{
+        text-align: center;
+        font-size: 4rem;
+        @include mq(sp) {
+            font-size: 2rem;
+        }
+    }
+    p{
+        margin-top: 20px;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        @include mq(sp) {
+            font-size: 1.2rem;
+        }
+    }
+}
