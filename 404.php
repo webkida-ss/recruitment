@@ -1,5 +1,4 @@
 <?php if (!strstr($_SERVER['REQUEST_URI'], 'recruit')) : ?>
-	URLに「hoge」が含まれるページは処理しない
 
 	<?php get_header(); ?>
 
@@ -54,6 +53,10 @@
 						border-radius: 10px;
 						background: #ccc;
 						margin-right: 5px;
+					}
+
+					body {
+						text-align: center;
 					}
 				</style>
 
